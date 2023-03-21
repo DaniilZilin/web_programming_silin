@@ -4,76 +4,129 @@
     <link rel="stylesheet" href="MainPageStyles.css" type="text/css"/>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Сайт Губернатора области</title>
 </head>
 <body>
 <div>
-  <div class="rectangle">
+  <Header class="rectangle">
     <div style="display: flex;">
       <img class="logoOfSite" src="img/ulyanovsk_logo.png">
       <div class="nameOfSite">Интернет-приёмная Губернатора Ульяновской области</div>
       <div style="flex-direction: column; margin-left: 367px; margin-top: 18px;">
-        <div style="display: flex;">
-          <img class="comparedVisibilityImage" src="img/index.png">
-          <div>Версия для слабовидящих</div>
+        <div style="display: flex; margin-bottom: 15px;">
+          <img class="comparedVisibilityImage" src="img/Vector.png">
+          <div class="comparedVisionText">Версия для слабовидящих</div>
         </div>
-        <div>
+        <div style="margin-left: 40px;">
           <div class="callUs">позвони нам</div>
-          <div class="callUs">8(8422)41 20 90</div>
+          <div class="callUsNumber">8(8422)41 20 90</div>
         </div>
       </div>
     </div>
     <div class="menuList">
-      <div style="display: flex; margin-bottom: 10px;">
-        <div>Губернатор области</div>
-        <div>Обращения граждан (приёмная)</div>
-        <div>Контакты (телефоны и адреса)</div>
-        <div>Объявления и вакансии</div>
+      <div style="display: flex; margin-bottom: 25px;">
+        <div class="btn-secondary menuListButton">Губернатор области</div>
+        <div class="btn-secondary menuListButton">Обращения граждан (приёмная)</div>
+        <div class="btn-secondary menuListButton">Контакты (телефоны и адреса)</div>
+        <div class="btn-secondary menuListButton">Объявления и вакансии</div>
       </div>
       <div style="display: flex;">
-        <div>Правительство  (органы власти)</div>
-        <div>Инвестиции (для инвесторов)</div>
-        <div>Данные об области</div>
-        <div>Органы власти</div>
+        <div class="btn-secondary menuListButton">Правительство  (органы власти)</div>
+        <div class="btn-secondary menuListButton">Инвестиции (для инвесторов)</div>
+        <div class="btn-secondary menuListButton">Данные об области</div>
+        <div class="btn-secondary menuListButton">Органы власти</div>
       </div>
     </div>
+  </Header>
+  <div class="notificationBar">
+    <div class="dearViewers">Уважаемые пользователи интернет-приёмной</div>
+    <div class="mainNotification">Пожалуйста, прежде чем направить в интернет-приемную обращение по
+        введенным на территории Ульяновской области ограничительным мерам в связи с распространением
+        новой коронавирусной инфекцией (COVID-19), внимательно ознакомьтесь с информацией в разделе СТОП КОРОНАВИРУС
     </div>
   </div>
-    <div class="notificationBar">
-        <p class="dearViewers">Уважаемые пользователи интернет-приёмной</p>
-        <p class="mainNotification">Пожалуйста, прежде чем направить в интернет-приемную обращение по
-            введенным на территории Ульяновской области ограничительным мерам в связи с распространением
-            новой коронавирусной инфекцией (COVID-19), внимательно ознакомьтесь с информацией в разделе СТОП КОРОНАВИРУС
-        </p>
+  <Main class="mainContent">
+    <p class="nameOfMainContent">Выберите государственную услугу (орган власти для обращения)</p>
+    <div class="itemsContainer">
+      <div class="card cardParams">
+        <div class="cardImg"></div>
+        <div class="card-block">
+          <div class="card-title cardTitle" style="margin-bottom: 59px;">Обращение к губернатору Ульяновской области - Алексею Русских</div>
+          <div class="btn-primary blueButton">Написать</div>
+        </div>
+      </div>
+      <div class="card cardParams">
+        <div class="cardImg"></div>
+        <div class="card-block">
+          <div class="card-title cardTitle" style="margin-bottom: 59px;">Обращение к заместителю губернатора Ульяновской области - Эдель Игорь</div>
+          <div class="btn-primary blueButton">Написать</div>
+        </div>
+      </div>
+      <div class="card cardParams">
+        <div class="cardImg"></div>
+        <div class="card-block">
+          <div class="card-title cardTitle" style="margin-bottom: 59px;">Заявление в министерство здравоохранения Ульяновской области</div>
+          <div class="btn-primary blueButton">Написать</div>
+        </div>
+      </div>
+      <div class="card cardParams">
+        <div class="cardImg"></div>
+        <div class="card-block">
+          <div class="card-title cardTitle" style="margin-bottom: 59px;">Заявление в министерство промышленности и торговли Ульяновской области</div>
+          <div class="btn-primary blueButton">Написать</div>
+        </div>
+      </div>
+      <div class="card cardParams">
+        <div class="cardImg"></div>
+        <div class="card-block">
+          <div class="card-title cardTitle" style="margin-bottom: 59px;">Заявление в Управление государственной архивной службы Ульяновской области</div>
+          <div class="btn-primary blueButton">Написать</div>
+        </div>
+      </div>
+      <div class="card cardParams">
+        <div class="cardImg"></div>
+        <div class="card-block">
+          <div class="card-title cardTitle" style="margin-bottom: 59px;">Управление государственной архивной службы Самарской области</div>
+          <div class="btn-primary blueButton">Написать</div>
+        </div>
+      </div>
     </div>
-    <div class="mainContent">
-
-    </div>
-    <div class="footer" style="display: flex">
-      <div>
+  </Main>
+  <Footer class="footer" style="display: flex;">
+      <div style="margin-right: 65px;">
         <div class="footerTitle">Правительство Ульяновской области</div>
         <img class="gerb_ul" src="img/gerb_uo_2%201.png">
       </div>
-      <div style="display: flex; margin-left: 66px; margin-top: 69px">
-        <ul>
-          <li>События</li>
-          <li>Новости</li>
-          <li>Анонсы</li>
-          <li>Контакты пресс-служб</li>
-        </ul>
-        <ul>
-          <li>События</li>
-          <li>Новости</li>
-          <li>Анонсы</li>
-          <li>Контакты пресс-служб</li>
-        </ul>
-        <ul>
-          <li>События</li>
-          <li>Новости</li>
-          <li>Анонсы</li>
-          <li>Контакты пресс-служб</li>
-        </ul>
+      <div class="footerTextContainer">
+        <div class="smallColumnContainer">
+          <div>Пресс-центр</div>
+          <ul>
+            <li class="liItem">События</li>
+            <li class="liItem">Новости</li>
+            <li class="liItem">Анонсы</li>
+            <li class="liItem">Контакты пресс-служб</li>
+          </ul>
+        </div>
+        <div class="smallColumnContainer">
+          <div>Пресс-центр</div>
+          <ul>
+            <li class="liItem">События</li>
+            <li class="liItem">Новости</li>
+            <li class="liItem">Анонсы</li>
+            <li class="liItem">Контакты пресс-служб</li>
+          </ul>
+        </div>
+        <div class="smallColumnContainer">
+          <div class="columnName">Пресс-центр</div>
+          <ul>
+            <li class="liItem">События</li>
+            <li class="liItem">Новости</li>
+            <li class="liItem">Анонсы</li>
+            <li class="liItem">Контакты пресс-служб</li>
+          </ul>
+        </div>
       </div>
-  </div>
+  </Footer>
+</div>
 </body>
 </html>
