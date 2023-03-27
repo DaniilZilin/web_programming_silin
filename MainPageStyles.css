@@ -69,7 +69,6 @@
 .mainContent {
     /*display: flex;*/
     width: 1125px;
-    height: 1020px;
     border: 1px solid black;
     margin: auto;
     margin-top: 10px;
@@ -192,4 +191,14 @@
   border-radius: 4px;
   cursor: pointer;
   padding: 8px 3px 9px 3px;
+}
+
+tr td {
+  width: 80px;
+  height: 50px;
+}
+
+td, th:not(:first-child) {
+  width: 200px;
+  height: 50px;
 }
