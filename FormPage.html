@@ -6,6 +6,20 @@
     <meta charset="UTF-8">
     <title>Сайт Губернатора области</title>
     <link rel="icon" href="img/gerb_uo_2%201.png">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('input').attr("required", true)
+        $('#myForm').submit(function(e) {
+          if ($('#fullName').val() === "") {
+            e.preventDefault();
+            alert('узбек');
+          } else {
+            alert('123123')
+          }
+        });
+      });
+    </script>
 </head>
 <body>
 <div>
@@ -48,17 +62,21 @@
   </div>
   <Main class="mainContent">
     <p class="nameOfMainContent">Заполните форму для обращения к Губернатору Ульяновской области (Алексей Русских)</p>
-    <form style="margin: 50px;" method="post" action="">
+    <form style="margin: 50px;" method="post" action="" id="myForm">
       <div style="margin-bottom: 8px;">Выберите адресата:</div>
       <select class="form-control fieldFormParams" name="addressee" size="1">
         <option value="1" selected>Губернатор области - Алексей Русских</option>
         <option value="2">Заместитель губренатора - Эдель</option>
       </select>
       <div>Ваше полное ФИО:</div>
-      <input class="form-control fieldFormParams" name="fullName" type="text" placeholder="Введите ваше ФИО">
+      <input class="form-control fieldFormParams" id="fullName" name="fullName" type="text" placeholder="Введите ваше ФИО">
+      <div>Введите номер телефона:</div>
+      <input type="text" class="form-control fieldFormParams" name="phoneNumber" placeholder="Введите номер телефона">
       <div>Ваш Email:</div>
       <input class="form-control fieldFormParams" name="fullName" type="text" placeholder="Введите Email">
-      <div>Ваш вопрос:</div>
+      <div>Тема вопроса:</div>
+      <input type="text" class="form-control fieldFormParams" name="phoneNumber" placeholder="Введите тему вопроса">
+      <div>Текст вопроса:</div>
       <textarea class="form-control fieldFormParams"></textarea>
       <input type="submit" class="btn-primary blueButton" style="width: 85px;" value="Отправить">
     </form>
