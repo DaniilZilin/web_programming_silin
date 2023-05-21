@@ -6,3 +6,9 @@ $(function () {
     }
   })
 });
+
+$(function EmailValidate(string) {
+  var pattern = /^\S+@\S+\$/;
+
+  return
+})
