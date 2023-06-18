@@ -13,8 +13,14 @@
         $('#myForm').submit(function (e) {
           var input = $('#email')
           var regexp = new RegExp('^.+@.+$').test(input.val());
+          var phoneNumber = new RegExp('^(8|\\+7)(\\ |\\(| \\(|\\-|)\\d{3}(\\ |\\) |-|\\)|)(\\d{7}|\\d{3}-\\d{2}-\\d{2}|\\d{3} \\d{2} \\d{2})$').test(input.val());
           if (regexp) {
             $('#email').append('<div>1q23123123</div>');
+            console.log('correct')
+          } else {
+            console.log('incorrect')
+          }
+          if (phoneNumber) {
             console.log('correct')
           } else {
             console.log('incorrect')
