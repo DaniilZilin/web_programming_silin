@@ -7,46 +7,7 @@
     <title>Сайт Губернатора области</title>
     <link rel="icon" href="img/gerb_uo_2%201.png">
     <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('input, textarea, select').attr("required", true)
-        $('#myForm').submit(function (e) {
-          var input = $('#email')
-          var regexp = new RegExp('^.+@.+$').test(input.val());
-          var phoneNumber = new RegExp('^(8|\\+7)(\\ |\\(| \\(|\\-|)\\d{3}(\\ |\\) |-|\\)|)(\\d{7}|\\d{3}-\\d{2}-\\d{2}|\\d{3} \\d{2} \\d{2})$').test(input.val());
-          if (regexp) {
-            $('#email').append('<div>1q23123123</div>');
-            console.log('correct')
-          } else {
-            console.log('incorrect')
-          }
-          if (phoneNumber) {
-            console.log('correct')
-          } else {
-            console.log('incorrect')
-          }
-
-          e.preventDefault();
-          var addressee = $('#addressee').val();
-          var fullName = $('#fullName').val();
-          var phoneNumber = $('#phoneNumber').val();
-          var userEmail = $('#email').val();
-          var question = $('#question').val();
-          var textOfQuestion = $('#textOfQuestion').val();
-
-          var formData = {
-            addressee: addressee,
-            fullName: fullName,
-            phoneNumber: phoneNumber,
-            email: userEmail,
-            question: question,
-            textOfQuestion: textOfQuestion,
-          }
-
-          console.log(JSON.stringify(formData))
-        })
-      });
-    </script>
+    <script src="styles/script.js" type="text/javascript"></script>
 </head>
 <body>
 <div>
@@ -91,22 +52,40 @@
     <p class="nameOfMainContent">Заполните форму для обращения к Губернатору Ульяновской области (Алексей Русских)</p>
     <form style="margin: 50px;" method="post" action="" id="myForm">
       <div style="margin-bottom: 8px;">Выберите адресата:</div>
-      <select id="adressee" class="form-control fieldFormParams" name="addressee" size="1">
+      <select id="adressee" class="form-control fieldFormParams" name="addressee" size="1" required>
         <option value="1" selected>Губернатор области - Алексей Русских</option>
         <option value="2">Заместитель губренатора - Эдель</option>
       </select>
       <div>Ваше полное ФИО:</div>
-      <input type="text"  class="form-control fieldFormParams" id="fullName" name="fullName" placeholder="Введите ваше ФИО">
+      <input type="text"  class="form-control fieldFormParams" id="fullName" name="fullName" placeholder="Введите ваше ФИО" required>
       <div>Введите номер телефона:</div>
-      <input type="text" class="form-control fieldFormParams" id="phoneNumber" name="phoneNumber" placeholder="Введите номер телефона">
+      <input type="text" class="form-control fieldFormParams" id="phoneNumber" name="phoneNumber" placeholder="Введите номер телефона" required>
       <div>Ваш Email:</div>
-      <input type="text" class="form-control fieldFormParams" id="email" name="email" placeholder="Введите Email">
+      <input type="text" class="form-control fieldFormParams" id="email" name="email" placeholder="Введите Email" required>
       <div>Тема вопроса:</div>
-      <input type="text" class="form-control fieldFormParams" id="question" name="question" placeholder="Введите тему вопроса">
+      <input type="text" class="form-control fieldFormParams" id="question" name="question" placeholder="Введите тему вопроса" required>
       <div>Текст вопроса:</div>
-      <textarea id="textOfQuestion" class="form-control fieldFormParams"></textarea>
+      <textarea id="textOfQuestion" class="form-control fieldFormParams" required></textarea>
       <button id="submitButton" type="submit" class="btn-primary blueButton" style="width: 85px;">Отправить</button>
-<!--      <input type="submit" class="btn-primary blueButton" style="width: 85px;" value="Отправить">-->
+
+      <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Окно валидации</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close" data-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </form>
   </Main>
   <Footer class="footer" style="display: flex;">

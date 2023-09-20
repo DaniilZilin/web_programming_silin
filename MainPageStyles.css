@@ -252,3 +252,15 @@ a {
   color: black;
   text-decoration: none;
 }
+
+.modal {
+  display: none;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,.8);
+  overflow: auto;
+}
+
+.modal-header {
+  background: #546E7A;
+  color: #ffffff;
+}
