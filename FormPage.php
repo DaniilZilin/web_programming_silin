@@ -50,22 +50,22 @@
   </div>
   <Main class="mainContent">
     <p class="nameOfMainContent">Заполните форму для обращения к Губернатору Ульяновской области (Алексей Русских)</p>
-    <form style="margin: 50px;" method="post" action="" id="myForm">
+    <form style="margin: 50px;" method="post" action="insert.php" id="myForm">
       <div style="margin-bottom: 8px;">Выберите адресата:</div>
-      <select id="adressee" class="form-control fieldFormParams" name="addressee" size="1" required>
+      <select id="addressee" class="form-control fieldFormParams" name="addressee" size="1" required>
         <option value="1" selected>Губернатор области - Алексей Русских</option>
         <option value="2">Заместитель губренатора - Эдель</option>
       </select>
       <div>Ваше полное ФИО:</div>
-      <input type="text"  class="form-control fieldFormParams" id="fullName" name="fullName" placeholder="Введите ваше ФИО" required>
+      <input type="text" class="form-control fieldFormParams" id="full_name" name="full_name" placeholder="Введите ваше ФИО" required>
       <div>Введите номер телефона:</div>
-      <input type="text" class="form-control fieldFormParams" id="phoneNumber" name="phoneNumber" placeholder="Введите номер телефона" required>
+      <input type="text" class="form-control fieldFormParams" id="phone_number" name="phone_number" placeholder="Введите номер телефона" required>
       <div>Ваш Email:</div>
       <input type="text" class="form-control fieldFormParams" id="email" name="email" placeholder="Введите Email" required>
       <div>Тема вопроса:</div>
       <input type="text" class="form-control fieldFormParams" id="question" name="question" placeholder="Введите тему вопроса" required>
       <div>Текст вопроса:</div>
-      <textarea id="textOfQuestion" class="form-control fieldFormParams" required></textarea>
+      <textarea id="text_of_question" name="text_of_question" class="form-control fieldFormParams" required></textarea>
       <button id="submitButton" type="submit" class="btn-primary blueButton" style="width: 85px;">Отправить</button>
 
       <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

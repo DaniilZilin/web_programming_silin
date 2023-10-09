@@ -48,7 +48,7 @@
         новой коронавирусной инфекцией (COVID-19), внимательно ознакомьтесь с информацией в разделе СТОП КОРОНАВИРУС
     </div>
   </div>
-  <Main class="mainContent">
+    <Main class="mainContent">
     <p class="nameOfMainContent">Список госслужащих, являющихся членами Правительства Ульяновской области</p>
       <input id="inputSearch" style="margin-left: 70px;" type="text" placeholder="Поиск...">
     <table id="testTable" class="table-bordered tableParams" cellpadding="10px">
@@ -56,78 +56,15 @@
         <th>#</th><th>Имя</th><th>Фамилия</th><th>Отчество</th>
       </tr>
       <tbody id="alex">
-      <tr class="thead-default itemList">
-        <td>1</td>
-        <td>Мартынова</td>
-        <td>Наталья</td>
-        <td>Николаевна</td>
-      </tr>
-      <tr class="itemList">
-        <td>2</td>
-        <td>Воронцов</td>
-        <td>Сергей</td>
-        <td>Сергеевич</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Додин</td>
-        <td>Михаил</td>
-        <td>Викторович</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Зонтов</td>
-        <td>Николай</td>
-        <td>Васильевич</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Барынин</td>
-        <td>Вячеслав</td>
-        <td>Юрьевич</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>Тверская</td>
-        <td>Анна</td>
-        <td>Александровна</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>Кузнецов</td>
-        <td>Виталий</td>
-        <td>Евгеньевич</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>Кучиц</td>
-        <td>Сергей</td>
-        <td>Сергеевич</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>Эдель</td>
-        <td>Игорь</td>
-        <td>Васильевич</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Сидорова</td>
-        <td>Евгения</td>
-        <td>Евгеньевна</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Семёнкин</td>
-        <td>Михаил</td>
-        <td>Иванович</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Русских</td>
-        <td>Алексей</td>
-        <td>Юрьевич</td>
-      </tr>
+      <?php
+        include "script.php";
+            foreach ( $result as $data) {
+                echo "<tr><td>".$data['offical_id']."</td>";
+                echo "<td>".$data['last_name']."</td>";
+                echo "<td>".$data['first_name']."</td>";
+                echo "<td>".$data['surname']."</td></tr>";
+            }
+      ?>
       </tbody>
     </table>
   </Main>
