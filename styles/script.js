@@ -7,31 +7,48 @@ $(document).ready(function() {
         })
         var emailRegex = new RegExp('^.+@.+$')
         var phoneNumberRegex = new RegExp('^(8|\\+7)(\\ |\\(| \\(|\\-|)\\d{3}(\\ |\\) |-|\\)|)(\\d{7}|\\d{3}-\\d{2}-\\d{2}|\\d{3} \\d{2} \\d{2})$');
-        var adressee = $('#adressee').val();
+        var addressee = $('#addressee').val();
         var fullName = $('#fullName').val();
         var question = $('#question').val();
         var textOfQuestion = $('#textOfQuestion').val();
         var phoneNumber = $('#phoneNumber').val();
         var userEmail = $('#email').val();
 
+        var formData = {
+            addressee: addressee,
+            fullName: fullName,
+            phoneNumber: phoneNumber,
+            email: userEmail,
+            question: question,
+            textOfQuestion: textOfQuestion,
+        }
+
         phoneNumberState = phoneNumberRegex.test(phoneNumber);
         emailState = emailRegex.test(userEmail);
 
         if (phoneNumberState && emailState) {
             $('.modal-body').text('Данные формы успешно обработаны и отправлены');
+            $.ajax({
+                type: "POST",
+                url: 'ajax.php',
+                data: {
+                    addressee: addressee,
+                    fullName: fullName,
+                    phoneNumber: phoneNumber,
+                    email: userEmail,
+                    question: question,
+                    textOfQuestion: textOfQuestion,
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (data) {
+                    console.log(data)
+                }
+            })
         } else {
            $('.modal-body').text('Данные формы некорректны');
         }
-
-        var formData = {
-          addressee: adressee,
-          fullName: fullName,
-          phoneNumber: phoneNumber,
-          email: userEmail,
-          question: question,
-          textOfQuestion: textOfQuestion,
-        }
-        console.log(JSON.stringify(formData))
     }))
     $("#inputSearch").on("keyup", function() {
       var value = $(this).val().toLowerCase();

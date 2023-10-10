@@ -5,6 +5,24 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="styles/script.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            ($('#myForm').on('submit', function (e) {
+                e.preventDefault()
+                $.ajax({
+                    method: 'GET',
+                    url: 'ajax.php',
+                    success: function (data) {
+                        console.log(data)
+                        $('#data_from_db').html(data)
+                    },
+                    error: function (data) {
+                        alert(data)
+                    },
+                })
+            }))
+        });
+    </script>
     <meta charset="UTF-8">
     <title>Сайт Губернатора области</title>
     <link rel="icon" href="img/gerb_uo_2%201.png">
@@ -67,6 +85,15 @@
       ?>
       </tbody>
     </table>
+
+    <table>
+        <tbody id="data_from_db">
+
+        </tbody>
+    </table>
+    <form style="margin: 50px;" method="post" action="" id="myForm">
+        <button id="getData" type="submit" class="btn-primary blueButton" style="width: 85px;">Загрузить данные из БД</button>
+    </form>
   </Main>
   <Footer class="footer" style="display: flex;">
       <div style="margin-right: 65px;">
