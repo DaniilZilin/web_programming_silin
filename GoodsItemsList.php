@@ -56,6 +56,7 @@
         <div class="btn-secondary menuListButton">Инвестиции (для инвесторов)</div>
         <div class="btn-secondary menuListButton">Данные об области</div>
         <div class="btn-secondary menuListButton">Органы власти</div>
+        <div class="btn-secondary menuListButton">Органы власти</div>
       </div>
     </div>
   </Header>
